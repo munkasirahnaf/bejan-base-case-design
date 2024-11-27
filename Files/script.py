@@ -334,7 +334,7 @@ class GasTurbineFlowsheetData(FlowsheetBlockData):
             "CO2": 0.0,
             "N2": 0.0,
         }
-        self.feed_fuel1.temperature.fix(850.0)
+        self.feed_fuel1.temperature.fix(298.15)
         self.feed_fuel1.pressure.fix(1.2e6)
         self.feed_fuel1.flow_mol.fix(100)
         for i, v in ng_comp.items():
@@ -601,7 +601,7 @@ class GasTurbineFlowsheetData(FlowsheetBlockData):
         
         # Feed fuel
         self.feed_fuel1.flow_mol.fix(100)
-        self.feed_fuel1.temperature.fix(850.0)
+        self.feed_fuel1.temperature.fix(298.15)
         self.feed_fuel1.pressure.fix(1.2e6)
         self.feed_fuel1.initialize(outlvl=outlvl, solver=solver, optarg=optarg)
         propagate_state(self.fuel01)
@@ -749,3 +749,19 @@ m.fs.initialize(
     save_to="gas_turbine_init.json.gz",
 )
 res = solver.solve(m, tee=True)
+
+# Check degrees of freedom
+print(degrees_of_freedom(m))
+
+# Saving simulation values to a csv file
+m.fs.flue_gas_streams_dataframe().to_csv(
+                "data_tabulated/stream.csv"
+            )
+# Component by component report
+for i in m.fs.component_objects():
+        if isinstance(i, UnitModelBlockData):
+            i.report()
+
+# Power generated
+print(-1*pyo.value(pyo.units.convert(m.fs.gts1.work_mechanical[0],pyo.units.MW))\
+        -1*pyo.value(pyo.units.convert(m.fs.cmp1.work_mechanical[0],pyo.units.MW)),pyo.units.MW)
