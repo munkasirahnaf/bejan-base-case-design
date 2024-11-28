@@ -45,7 +45,9 @@
 |Remaining flow- and component-based specifications||||
 |Molar analysis of air||||
 ||$N_2$ mole percent|77.48||
-||$N_2$ mole percent|77.48||
-||$N_2$ mole percent|77.48||
-||$N_2$ mole percent|77.48||
+||$O_2$ mole percent|20.59||
+||$CO_2$ mole percent|0.03||
+||$H_2O$ mole percent|1.9||
+|Fuel||||
+|||||
 
