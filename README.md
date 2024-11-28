@@ -36,4 +36,10 @@
 |Mass flow rate of steam|$\dot{m}_{steam}$|14|kg/s|
 |Pressure of steam|$p_{steam}$|20|bar|
 |Quality of steam|$x$|1||
+|Overall process decision variables||||
+|Pressure ratio of compression|$r_{p,AC}$|10||
+|Isentropic efficiency of air compressor|$\eta_{s,AC}$|0.86||
+|isentropic efficiency of expander|$\eta_{s,EXP}$|0.86||
+|Combustion chamber inlet temperature|$T_3$|850|K|
+|Expander inlet temperature|$T_4$|1520|K|
 
