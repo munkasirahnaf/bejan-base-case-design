@@ -25,4 +25,15 @@
 |9|Water|14.0000|485.570|20.000|
 |10|Methane|1.6419|`298.150`|`12.000`|
 
-### Table: Parameters and Decision Variables
+### Table: Parameters and Decision Variables  |||||
+|Parameter, decision variable|Symbol|Value|Unit|
+|---|---|---|---|
+|Ambient State||||
+|Temperature|$T_0$|298.15|K|
+|Pressure|$p_0$|1.013|bar|
+|Overall process requirements||||
+|Net power output|$\dot{W}_{net}$|30|MW|
+|Mass flow rate of steam|$\dot{m}_{steam}$|14|kg/s|
+|Pressure of steam|$p_{steam}$|20|bar|
+|Quality of steam|$x$|1||
+
