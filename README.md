@@ -42,4 +42,7 @@
 |isentropic efficiency of expander|$\eta_{s,EXP}$|0.86||
 |Combustion chamber inlet temperature|$T_3$|850|K|
 |Expander inlet temperature|$T_4$|1520|K|
+|Remaining flow- and component-based specifications||||
+|Molar analysis of air||||
+|||||
 
