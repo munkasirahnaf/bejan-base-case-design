@@ -25,29 +25,58 @@
 |9|Water|14.0000|485.570|20.000|
 |10|Methane|1.6419|**`298.150`**|**`12.000`**|
 
-### Table: Parameters and Decision Variables  |||||
+### Table: Parameters and Decision Variables
 |Parameter, decision variable|Symbol|Value|Unit|
 |---|---|---|---|
-|Ambient State||||
+|**Ambient State**||||
 |Temperature|$T_0$|298.15|K|
 |Pressure|$p_0$|1.013|bar|
-|Overall process requirements||||
+|**Overall process requirements**||||
 |Net power output|$\dot{W}_{net}$|30|MW|
 |Mass flow rate of steam|$\dot{m}_{steam}$|14|kg/s|
 |Pressure of steam|$p_{steam}$|20|bar|
 |Quality of steam|$x$|1||
-|Overall process decision variables||||
+|**Overall process decision variables**||||
 |Pressure ratio of compression|$r_{p,AC}$|10||
 |Isentropic efficiency of air compressor|$\eta_{s,AC}$|0.86||
 |isentropic efficiency of expander|$\eta_{s,EXP}$|0.86||
 |Combustion chamber inlet temperature|$T_3$|850|K|
 |Expander inlet temperature|$T_4$|1520|K|
-|Remaining flow- and component-based specifications||||
-|Molar analysis of air||||
-||$N_2$ mole percent|77.48||
-||$O_2$ mole percent|20.59||
-||$CO_2$ mole percent|0.03||
-||$H_2O$ mole percent|1.9||
-|Fuel||||
-|||||
+|**Remaining flow- and component-based specifications**||||
+|**Air**||||
+|**Molar Analysis**||||
+|$N_2$ mole percent||77.48||
+|$O_2$ mole percent||20.59||
+|$CO_2$ mole percent||0.03||
+|$H_2O$ mole percent||1.9||
+|**Fuel**||||
+|Temperature|$T_{10}$|298.15|K|
+|Pressure|$p_{10}$|12|bar|
+|Molar Analysis of$CH_4$||100||
+|**Air Preheater (APH)**||||
+|Pressure loss, air side|$\Delta{p}_{air,APH}$|5%||
+|Pressure loss, flue gas side|$\Delta{p}_{fluegas,APH}$|3%||
+|**Combustion Chamber**||||
+|Thermal efficiency|$\eta_{CC}$|0.98||
+|Pressure loss|$\Delta{p}_{CC}$|5%||
+|**Heat Recovery Steam Generator**||||
+|Pressure loss, flue gas side|$\Delta{p}_{fluegas,HRSG}$|5%||
+|Pressure loss, water side|$\Delta{p}_{water,APH}$|0%||
+
+### Table: Dependent Variables
+|Variable|Symbol|
+|---|---|
+|Mass flow rate of air|$\dot{m}_{air}$|
+|Mass flow rate of fuel|$\dot{m}_{fuel}$|
+|Mass flow rate of flue gas|$\dot{m}_{fluegas}$|
+|Molar analysis of flue gas||
+|$N_2$ mole percent||
+|$O_2$ mole percent||
+|$CO_2$ mole percent||
+|$H_2O$ mole percent||
+|Pressures|$p_2$, $p_3$, $p_4$, $p_5$, $p_6$|
+|Temperatures|$T_2$, $T_5$, $T_6$, $T_7$, $T_9$|
+|Work rates||
+|Work rate of Air Compressor|$\dot{W}_{AC}$|
+|Work rate of Expander|$\dot{W}_{EXP}$|
 
