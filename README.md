@@ -112,7 +112,7 @@
 ||$p_4$|bar|9.142|9.142325||
 ||$p_5$|bar|1.099|1.0993||
 ||$p_6$|bar|1.066|1.0663||
-|**Work rate**||||||
+|**Work rates**||||||
 |Work rate of the Air Compressor|$\dot{W}_{AC}$|MW|29.662|29.817|0.523|
 |Work rate of the Air Compressor|$\dot{W}_{EXP}$|MW|59.662|59.817|0.260|
 
