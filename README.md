@@ -12,7 +12,7 @@
 
  ### Table: Mass flow rate, temperature, and pressure data for the cogeneration system
  |State|Substance|Mass Flow Rate (kg/s)|Temperature (K)|Pressure (bars)|
-|---|---|---|---|---|
+|:---|:---:|:---:|:---:|:---:|
 |1|Air|91.2757|**`298.150`**|**`1.013`**|
 |2|Air|91.2757|603.738|10.130|
 |3|Air|91.2757|**`850.000`**|9.623|
@@ -26,7 +26,7 @@
 
 ### Table: Parameters and Decision Variables
 |Parameter, decision variable|Symbol|Value|Unit|
-|---|---|---|---|
+|:---|:---:|:---:|:---:|
 |**Ambient State**||||
 |Temperature|$T_0$|298.15|K|
 |Pressure|$p_0$|1.013|bar|
@@ -38,12 +38,11 @@
 |**Overall process decision variables**||||
 |Pressure ratio of compression|$r_{p,AC}$|10||
 |Isentropic efficiency of air compressor|$\eta_{s,AC}$|0.86||
-|isentropic efficiency of expander|$\eta_{s,EXP}$|0.86||
+|Isentropic efficiency of expander|$\eta_{s,EXP}$|0.86||
 |Combustion chamber inlet temperature|$T_3$|850|K|
 |Expander inlet temperature|$T_4$|1520|K|
 |**Remaining flow- and component-based specifications**||||
-|**Air**||||
-|**Molar Analysis**||||
+|**Molar Analysis of Air**||||
 |$N_2$ mole percent||77.48||
 |$O_2$ mole percent||20.59||
 |$CO_2$ mole percent||0.03||
@@ -51,7 +50,7 @@
 |**Fuel**||||
 |Temperature|$T_{10}$|298.15|K|
 |Pressure|$p_{10}$|12|bar|
-|Molar Analysis of$CH_4$||100||
+|Molar Analysis of $CH_4$||100||
 |**Air Preheater (APH)**||||
 |Pressure loss, air side|$\Delta{p}_{air,APH}$|5%||
 |Pressure loss, flue gas side|$\Delta{p}_{fluegas,APH}$|3%||
@@ -64,7 +63,7 @@
 
 ### Table: Dependent Variables
 |Variable|Symbol|
-|---|---|
+|:---|:---:|
 |Mass flow rate of air|$\dot{m}_{air}$|
 |Mass flow rate of fuel|$\dot{m}_{fuel}$|
 |Mass flow rate of flue gas|$\dot{m}_{fluegas}$|
@@ -78,4 +77,8 @@
 |Work rates||
 |Work rate of Air Compressor|$\dot{W}_{AC}$|
 |Work rate of Expander|$\dot{W}_{EXP}$|
+
+## Results
+### Table: Validation of Combustion Chamber
+|Variable|Symbol|Unit|Reference Value from Literature|Value from IDAES|$\Delta_{rel}=$|
 
