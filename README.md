@@ -105,5 +105,14 @@
 |At the outlet of Expander|$T_5$|K|1006.162|1011.0889|0.4897|
 |At the outlet of Air Preheater|$T_6$|K|779.784|795.5961|2.0278|
 |At the outlet of HRSG|$T_7$|K|426.897|431.6191|1.1061|
-|Temperatures of steam|$T_9$|K|485.57|485.527|0.0089|
+|Temperature of steam|$T_9$|K|485.57|485.527|0.0089|
+|**Pressures**||||||
+||$p_2$|bar|10.130|10.13||
+||$p_3$|bar|9.623|9.6235||
+||$p_4$|bar|9.142|9.142325||
+||$p_5$|bar|1.099|1.0993||
+||$p_6$|bar|1.066|1.0663||
+|**Work rate**||||||
+|Work rate of the Air Compressor|$\dot{W}_{AC}$|MW|29.662|29.817|0.523|
+|Work rate of the Air Compressor|$\dot{W}_{EXP}$|MW|59.662|59.817|0.260|
 
