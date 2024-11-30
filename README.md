@@ -105,5 +105,5 @@
 |At the outlet of Expander|$T_5$|K|1006.162|1011.0889|0.4897|
 |At the outlet of Air Preheater|$T_6$|K|779.784|795.5961|2.0278|
 |At the outlet of HRSG|$T_7$|K|426.897|431.6191|1.1061|
-
+|Temperatures of steam|$T_9$|K|485.57|485.527|0.0089|
 
