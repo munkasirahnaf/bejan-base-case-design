@@ -100,4 +100,10 @@
 |$O_2$ mole percent|||13.72|13.8254|0.768|
 |$CO_2$ mole percent|||3.14|3.0957|1.411|
 |$H_2O$ mole percent|||8.07|7.9749|1.178|
+|**Temperatures of air/flue gas**||||||
+|At the outlet of Air Compressor|$T_2$|K|603.738|613.2177|1.57|
+|At the outlet of Expander|$T_5$|K|1006.162|1011.0889|0.4897|
+|At the outlet of Air Preheater|$T_6$|K|779.784|795.5961|2.0278|
+|At the outlet of HRSG|$T_7$|K|426.897|431.6191|1.1061|
+
 
