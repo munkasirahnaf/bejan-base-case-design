@@ -80,5 +80,14 @@
 
 ## Results
 ### Table: Validation of Combustion Chamber
-|Variable|Symbol|Unit|Reference Value from Literature|Value from IDAES|$\Delta_{rel}=$|
+|Variable|Symbol|Unit|Reference Value from Literature|Value from IDAES|$\Delta_{rel}=\left ( \frac{Y}{Y_{ref}}-1 \right ) * 100 \text{ percent} $|
+|:---|:-:|:-:|:-:|:-:|:-:|
+|Mass flow rate of air||||||
+|||||||
+|||||||
+|||||||
+|||||||
+|||||||
+|||||||
+|||||||
 
