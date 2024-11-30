@@ -1,10 +1,9 @@
 # Optimization of CGAM Cogeneration System in IDAES
 ## Problem Statement
-### Sample Problem Base‐Case Design
+### Base-case Design of the Cogeneration System
 
 <figure>
   <img src="Files/bejan-book.png" alt="Cogeneration system">
-  <figcaption>Base-case design of the cogeneration system</figcaption>
 </figure>
 
 ### Parameter highlighting
