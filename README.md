@@ -82,12 +82,11 @@
 ### Table: Validation of Combustion Chamber
 |Variable|Symbol|Unit|Reference Value from Literature|Value from IDAES|$\Delta_{rel}=\left ( \frac{Y}{Y_{ref}}-1 \right ) * 100 \text{ percent} $|
 |:---|:-:|:-:|:-:|:-:|:-:|
-|Mass flow rate of air||||||
-|||||||
-|||||||
-|||||||
-|||||||
-|||||||
-|||||||
-|||||||
+|Mass flow rate of air|$\dot{m}_3$|kg/s|91.2757|91.1798|0.105|
+|Mass flow rate of fuel|$\dot{m}_{10}$|kg/s|1.6419|1.6153|1.6201|
+|**Molar analysis of flue gas**||||||
+|$N_2$ mole percent|||75.07|75.104|0.045|
+|$O_2$ mole percent|||13.72|13.8254|0.768|
+|$CO_2$ mole percent|||3.14|3.0957|1.411|
+|$H_2O$ mole percent|||8.07|7.9749|1.178|
 
