@@ -1,16 +1,16 @@
 # Optimization of CGAM Cogeneration System in IDAES
 ## Problem Statement
-### Base-case Design of the Cogeneration System
+#### Base-case Design of the Cogeneration System
 
 <figure>
   <img src="Files/bejan-book.png" alt="Cogeneration system">
 </figure>
 
-### Parameter highlighting
+#### Parameter highlighting
 - Specified input parameters: **`highlighted`**
 - Results of simulation: normalfont
 
- ### Table: Mass flow rate, temperature, and pressure data for the cogeneration system
+ #### Table: Mass flow rate, temperature, and pressure data for the cogeneration system
  |State|Substance|Mass Flow Rate (kg/s)|Temperature (K)|Pressure (bars)|
 |:---|:---:|:---:|:---:|:---:|
 |1|Air|91.2757|**`298.150`**|**`1.013`**|
@@ -24,7 +24,7 @@
 |9|Water|14.0000|485.570|20.000|
 |10|Methane|1.6419|**`298.150`**|**`12.000`**|
 
-### Table: Parameters and Decision Variables
+#### Table: Parameters and Decision Variables
 |Parameter, decision variable|Symbol|Value|Unit|
 |:---|:---:|:---:|:---:|
 |**Ambient State**||||
@@ -61,7 +61,7 @@
 |Pressure loss, flue gas side|$\Delta{p}_{fluegas,HRSG}$|5%||
 |Pressure loss, water side|$\Delta{p}_{water,APH}$|0%||
 
-### Table: Dependent Variables
+#### Table: Dependent Variables
 |Variable|Symbol|
 |:---|:---:|
 |Mass flow rate of air|$\dot{m}_{air}$|
@@ -79,7 +79,7 @@
 |Work rate of Expander|$\dot{W}_{EXP}$|
 
 ## Results
-### Table: Validation of Combustion Chamber
+#### Table: Validation of Combustion Chamber
 |Variable|Symbol|Unit|Reference Value from Literature|Value from IDAES|
 |:---|:-:|:-:|:-:|:-:|
 |Mass flow rate of air|$\dot{m}_3$|kg/s|91.2757|91.1798|
@@ -90,7 +90,7 @@
 |$CO_2$ mole percent|||3.14|3.0957|
 |$H_2O$ mole percent|||8.07|7.9749|
 
-### Table: Validation of CGAM Process, Reference Values, and Relative Deviations
+#### Table: Validation of CGAM Process, Reference Values, and Relative Deviations
 |Dependent Variable $Y$|Symbol|Unit|Reference Value from Literature|Value from IDAES|$\Delta_{rel}=\left(\frac{Y}{Y_{ref}}-1\right)* 100\\%$|
 |:---|:-:|:-:|:-:|:-:|:-:|
 |Mass flow rate of air|$\dot{m}_{air}$|kg/s|91.2757|91.1798|0.105|
