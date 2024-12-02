@@ -1,5 +1,8 @@
 # Optimization of CGAM Cogeneration System in IDAES
 ## Problem Statement
+CGAM process simulation:
+*A. Bejan, G. Tsatsaronis, M. Moran: Thermal Design and Optimization, Wiley,*
+*New York, 1996.*
 #### Base-case Design of the Cogeneration System
 
 <figure>
@@ -117,29 +120,35 @@
 |Work rate of the Air Compressor|$\dot{W}_{EXP}$|MW|59.662|59.817|0.260|
 
 ### Comparison with TESPy
+Simulation results from TESPy is taken from
+```bibtex
+Thermal Engineering Systems in Python (TESPy): The implementation and validation of the chemical exergy
+Hofmann, Mathias; Witte, Francesco; Shawky, Karim; Tuschy, Ilja; Tsatsaronis, George
+DOI: https://doi.org/10.14279/depositonce-20664
+```
 #### Table: Reference Values, Values from TESPy, and Values from IDAES
 |Dependent Variable|Symbol|Unit|Reference Value from Literature|Value from TESPy|Value from IDAES|
 |:---|:-:|:-:|:-:|:-:|:-:|
-|Mass flow rate of air|$\dot{m}_{air}$|kg/s|91.2757||91.1798|
-|Mass flow rate of fuel|$\dot{m}_{fuel}$|kg/s|1.6419||1.6153|
+|Mass flow rate of air|$\dot{m}_{air}$|kg/s|91.2757|90.939|91.1798|
+|Mass flow rate of fuel|$\dot{m}_{fuel}$|kg/s|1.6419|1.647|1.6153|
 |**Molar analysis of flue gas**|||||
-|$N_2$ mole percent|||75.07||75.104|
-|$O_2$ mole percent|||13.72||13.8254|
-|$CO_2$ mole percent|||3.14||3.0957|
-|$H_2O$ mole percent|||8.07||7.9749|
+|$N_2$ mole percent|||75.07|75.05|75.104|
+|$O_2$ mole percent|||13.72|13.68|13.8254|
+|$CO_2$ mole percent|||3.14|3.16|3.0957|
+|$H_2O$ mole percent|||8.07|8.10|7.9749|
 |**Temperatures of air/flue gas**||||||
-|At the outlet of Air Compressor|$T_2$|K|603.738||613.2177|
-|At the outlet of Expander|$T_5$|K|1006.162||1011.0889|
-|At the outlet of Air Preheater|$T_6$|K|779.784||795.5961|
-|At the outlet of HRSG|$T_7$|K|426.897||431.6191|
-|Temperature of steam|$T_9$|K|485.57||485.527|
+|At the outlet of Air Compressor|$T_2$|K|603.738|611.55|613.2177|
+|At the outlet of Expander|$T_5$|K|1006.162|1011.35|1011.0889|
+|At the outlet of Air Preheater|$T_6$|K|779.784|794.85|795.5961|
+|At the outlet of HRSG|$T_7$|K|426.897|430.45|431.6191|
+|Temperature of steam|$T_9$|K|485.57|485.55|485.527|
 |**Pressures**||||||
-||$p_2$|bar|10.130||10.13|
-||$p_3$|bar|9.623||9.6235|
-||$p_4$|bar|9.142||9.142325|
-||$p_5$|bar|1.099||1.0993|
-||$p_6$|bar|1.066||1.0663|
+||$p_2$|bar|10.130|10.03|10.13|
+||$p_3$|bar|9.623|9.6235|9.6235|
+||$p_4$|bar|9.142|9.1423|9.142325|
+||$p_5$|bar|1.099|1.0993|1.0993|
+||$p_6$|bar|1.066|1.0663|1.0663|
 |**Work rates**||||||
-|Work rate of the Air Compressor|$\dot{W}_{AC}$|MW|29.662||29.817|
-|Work rate of the Air Compressor|$\dot{W}_{EXP}$|MW|59.662||59.817|
+|Work rate of the Air Compressor|$\dot{W}_{AC}$|MW|29.662|29.695|29.817|
+|Work rate of the Air Compressor|$\dot{W}_{EXP}$|MW|59.662|59.695|59.817|
 
