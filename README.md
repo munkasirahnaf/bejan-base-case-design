@@ -2,7 +2,7 @@
 ## Problem Statement
 CGAM process simulation:
 *A. Bejan, G. Tsatsaronis, M. Moran: Thermal Design and Optimization, Wiley,*
-*New York, 1996.*
+*New York, 1995.*
 #### Base-case Design of the Cogeneration System
 
 <figure>
