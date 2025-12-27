@@ -146,6 +146,7 @@ class GasTurbineFlowsheetData(FlowsheetBlockData):
             property_package=self.cmb_prop_params,
             reaction_package=self.gas_combustion,
             has_pressure_change=True,
+            has_heat_transfer=True,
         )
         self.flue_translator = um.Translator(
             doc="Translate combustion mixture properties to flue gas",
@@ -175,7 +176,7 @@ class GasTurbineFlowsheetData(FlowsheetBlockData):
         )
             
     def _add_constraints(self):
-        # Complete combustion, use key components and 100% conversion (Make it 98%)
+        # Complete combustion, use key components and 100% conversion
         @self.cmb1.Constraint(self.time, self.rxns.keys())
         def reaction_extent(b, t, r):
             key = self.rxns[r]
@@ -183,6 +184,21 @@ class GasTurbineFlowsheetData(FlowsheetBlockData):
             stc = self.gas_combustion.rate_reaction_stoichiometry[r, "Vap", key]
             extent = b.rate_reaction_extent[t, r]
             return extent == - prp.flow_mol * prp.mole_frac_comp[key] / stc
+        # Heat loss constraint: 2% of heat of combustion is lost
+        # Thermal efficiency η_CC = 0.98 means 2% heat loss
+        # Heat loss = (1 - η_CC) * heat_of_reaction * reaction_extent
+        # For CH4 combustion: ΔH_rxn ≈ -802.3 kJ/mol (negative = exothermic)
+        # The heat term represents heat removed from the system (negative = heat loss)
+        @self.cmb1.Constraint(self.time)
+        def heat_loss_eqn(b, t):
+            # Heat of combustion for CH4 (J/mol) - LHV
+            delta_h_rxn = -802300  # J/mol (exothermic, negative)
+            # 2% heat loss (1 - 0.98 = 0.02)
+            heat_loss_fraction = 0.02
+            # Total heat released by combustion
+            heat_released = -delta_h_rxn * b.rate_reaction_extent[t, "ch4_cmb"]
+            # Heat duty is negative (heat lost to surroundings)
+            return b.control_volume.heat[t] == -heat_loss_fraction * heat_released
         # Pressure in the air-fuel mixer
         @self.inject1.Constraint(self.time)
         def mxpress_eqn(b, t):
@@ -526,6 +542,10 @@ class GasTurbineFlowsheetData(FlowsheetBlockData):
                 iscale.set_scaling_factor(v, 0.001)
             else:
                 iscale.set_scaling_factor(v, 0.1)
+        # Scaling for combustor heat (2% of ~80 MW = ~1.6 MW)
+        iscale.set_scaling_factor(self.cmb1.control_volume.heat, 1e-6)
+        for c in self.cmb1.heat_loss_eqn.values():
+            iscale.constraint_scaling_transform(c, 1e-6)
         for v in self.gt_power.values():
             iscale.set_scaling_factor(v, 1e-8)
         for c in self.gt_power_eqn.values():
