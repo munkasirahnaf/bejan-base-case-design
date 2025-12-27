@@ -1,0 +1,16 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# IDAES initialization files
+*.json.gz
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Output directories
+data/
+data_pfds/
+data_tabulated/
