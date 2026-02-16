@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# IDAES
+*.json.gz
+data/
+data_pfds/
+data_tabulated/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
