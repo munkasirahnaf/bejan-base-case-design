@@ -152,6 +152,37 @@ DOI: https://doi.org/10.14279/depositonce-20664
 |Work rate of the Air Compressor|$\dot{W}_{AC}$|MW|29.662|29.695|29.817|
 |Work rate of the Air Compressor|$\dot{W}_{EXP}$|MW|59.662|59.695|59.817|
 
+## Running the Code
+
+### Option 1: Running with Python Script (Functional Approach)
+The repository contains a refactored version of the code using a functional programming approach (without Python classes) in `Files/script.py`. To run it directly:
+
+```bash
+cd Files
+python script.py
+```
+
+### Option 2: Running in Jupyter Notebook (Recommended)
+For an interactive experience, use the provided Jupyter notebook `Files/bejan-functional-notebook.ipynb`:
+
+```bash
+cd Files
+jupyter notebook bejan-functional-notebook.ipynb
+```
+
+The notebook provides:
+- Step-by-step execution with explanations
+- Visualization of results in tables
+- Interactive exploration of the model
+- Easy modification of parameters
+
+Key functions available in the functional approach:
+- `build_flowsheet(m)` - Builds the complete gas turbine flowsheet
+- `initialize_flowsheet(fs, ...)` - Initializes all unit models
+- `steam_streams_dataframe(fs)` - Generates steam stream table
+- `flue_gas_streams_dataframe(fs)` - Generates flue gas stream table
+- `check_scaling(fs, m)` - Checks model scaling quality
+
 ## Process Flowsheet
 ```python
 import os
