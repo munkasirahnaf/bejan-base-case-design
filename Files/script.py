@@ -202,6 +202,16 @@ def add_constraints(fs):
             / b.control_volume.properties_in[t].pressure
         )
 
+    # Air preheater tube outlet temperature constraint (T3 = 850 K)
+    @fs.aph_tube.Constraint(fs.time)
+    def outlet_temperature_eqn(b, t):
+        return b.control_volume.properties_out[t].temperature == 850.0
+
+    # Combustor outlet temperature constraint (T4 = 1520 K)
+    @fs.cmb1.Constraint(fs.time)
+    def outlet_temperature_eqn(b, t):
+        return b.control_volume.properties_out[t].temperature == 1520.0
+
     # Pressure drop in the shell section of HRSG evaporator is 5%
     @fs.evap.shell.Constraint(fs.time)
     def pressure_drop_eqn(b, t):
