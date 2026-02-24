@@ -225,7 +225,7 @@ def add_constraints(fs):
 
     # Evaporation
     @fs.evap.Constraint(
-        fs.time, doc="Everything evaporates in evaporator"
+        fs.config.time, doc="Everything evaporates in evaporator"
     )
     def sat_vap_eqn(b, t):
         return (
@@ -253,7 +253,7 @@ def add_constraints(fs):
     for blk in translators:
         blk.temperature_eqn = pyo.Constraint(fs.time, rule=rule_temperature)
         blk.pressure_eqn = pyo.Constraint(fs.time, rule=rule_pressure)
-        for t in fs.time:
+        for t in fs.config.time:
             iscale.constraint_scaling_transform(blk.temperature_eqn[t], 1e-2)
             iscale.constraint_scaling_transform(blk.pressure_eqn[t], 1e-6)
 
